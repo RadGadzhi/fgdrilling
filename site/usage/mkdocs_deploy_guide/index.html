@@ -12,13 +12,9 @@
         <meta name="author" content="Твоя команда">
       
       
-        <link rel="canonical" href="https://RadGadzhi.github.io/fgdrilling/architecture/overview/">
+        <link rel="canonical" href="https://RadGadzhi.github.io/fgdrilling/usage/mkdocs_deploy_guide/">
       
       
-        <link rel="prev" href="../..">
-      
-      
-        <link rel="next" href="../components/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>Обзор - Project Knowledge Base</title>
+        <title>🚀 Инструкция: Развёртывание базы знаний на GitHub Pages через MkDocs - Project Knowledge Base</title>
       
     
     
@@ -68,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#github-pages-mkdocs" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -104,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Обзор
+              🚀 Инструкция: Развёртывание базы знаний на GitHub Pages через MkDocs
             
           </span>
         </div>
@@ -223,8 +219,6 @@
       
   
   
-    
-  
   
   
     
@@ -237,11 +231,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -257,7 +251,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Архитектура
@@ -268,19 +262,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../architecture/overview/" class="md-nav__link">
         
   
   
@@ -291,7 +276,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -304,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../components/" class="md-nav__link">
+      <a href="../../architecture/components/" class="md-nav__link">
         
   
   
@@ -327,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-flow/" class="md-nav__link">
+      <a href="../../architecture/data-flow/" class="md-nav__link">
         
   
   
@@ -542,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/user-guide/" class="md-nav__link">
+      <a href="../user-guide/" class="md-nav__link">
         
   
   
@@ -565,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/test-cases/" class="md-nav__link">
+      <a href="../test-cases/" class="md-nav__link">
         
   
   
@@ -588,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/examples/" class="md-nav__link">
+      <a href="../examples/" class="md-nav__link">
         
   
   
@@ -819,8 +803,138 @@
 
 
 
-<h1 id="_1">Архитектура<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Описание архитектуры системы.</p>
+<h1 id="github-pages-mkdocs">🚀 Инструкция: Развёртывание базы знаний на GitHub Pages через MkDocs<a class="headerlink" href="#github-pages-mkdocs" title="Permanent link">&para;</a></h1>
+<p>Эта инструкция основана на успешной настройке в macOS с использованием <code>mkdocs</code> и публикацией через GitHub Pages.</p>
+<hr />
+<h2 id="_1">📁 Структура проекта<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>mac_demo_project/
+├── mkdocs.yml              ← конфигурационный файл MkDocs
+├── docs/                   ← папка с Markdown-документацией
+│   ├── index.md
+│   ├── architecture/
+│   ├── tech-docs/
+│   ├── usage/
+│   ├── decisions/
+│   └── team/
+</code></pre></div>
+
+<hr />
+<h2 id="macos">⚙️ Подготовка окружения (на macOS)<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Создай и активируй виртуальное окружение:</strong>
+   <code>bash
+   python3 -m venv venv
+   source venv/bin/activate</code></p>
+</li>
+<li>
+<p><strong>Установи MkDocs и тему Material:</strong>
+   <code>bash
+   pip install mkdocs mkdocs-material</code></p>
+</li>
+</ol>
+<hr />
+<h2 id="mkdocsyml">🗂 Пример <code>mkdocs.yml</code><a class="headerlink" href="#mkdocsyml" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Project Knowledge Base</span>
+<span class="nt">theme</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span>
+<span class="nt">docs_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs</span>
+
+<span class="nt">nav</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Главная</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Архитектура</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Обзор</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">architecture/overview.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Техническая документация</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">API</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tech-docs/api-specs.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Руководства</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Пользователь</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usage/user-guide.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Решения</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">decisions/0001-db-choice.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Команда</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">team/contributors.md</span>
+</code></pre></div>
+
+<hr />
+<h2 id="ssh-github">🔐 Настройка SSH-доступа к GitHub<a class="headerlink" href="#ssh-github" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Создание SSH-ключа (если ещё не создан):</strong>
+   <code>bash
+   ssh-keygen -t ed25519 -C "you@example.com"</code></p>
+</li>
+<li>
+<p><strong>Добавить ключ в ssh-agent и Keychain:</strong>
+   <code>bash
+   eval "$(ssh-agent -s)"
+   ssh-add --apple-use-keychain ~/.ssh/id_ed25519</code></p>
+</li>
+<li>
+<p><strong>Добавить публичный ключ в GitHub:</strong></p>
+</li>
+<li>Открыть: https://github.com/settings/keys</li>
+<li>
+<p>Вставить содержимое <code>~/.ssh/id_ed25519.pub</code></p>
+</li>
+<li>
+<p><strong>Настроить remote-URL для SSH:</strong>
+   <code>bash
+   git remote set-url origin git@github.com:USERNAME/REPO.git</code></p>
+</li>
+</ol>
+<hr />
+<h2 id="_2">🧱 Настройка репозитория<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Инициализируй git в корне проекта (если не сделано):</strong>
+   <code>bash
+   git init
+   git add .
+   git commit -m "Initial commit"</code></p>
+</li>
+<li>
+<p><strong>Добавь GitHub-репозиторий как remote:</strong>
+   <code>bash
+   git remote add origin git@github.com:USERNAME/REPO.git</code></p>
+</li>
+<li>
+<p><strong>Push в ветку main:</strong>
+   <code>bash
+   git push -u origin main</code></p>
+</li>
+</ol>
+<hr />
+<h2 id="github-pages">🌐 Публикация через GitHub Pages<a class="headerlink" href="#github-pages" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Разверни проект:</strong>
+   <code>bash
+   mkdocs gh-deploy</code></p>
+</li>
+<li>
+<p><strong>Открой настройки Pages:</strong></p>
+</li>
+<li>Перейди в <code>https://github.com/USERNAME/REPO/settings/pages</code></li>
+<li>Выбери:<ul>
+<li>Source: <code>Deploy from a branch</code></li>
+<li>Branch: <code>gh-pages</code></li>
+<li>Folder: <code>/ (root)</code></li>
+</ul>
+</li>
+<li>
+<p>Нажми <strong>Save</strong></p>
+</li>
+<li>
+<p><strong>Готово! Документация доступна по адресу:</strong>
+   <code>https://USERNAME.github.io/REPO/</code></p>
+</li>
+</ol>
+<hr />
+<h2 id="_3">✅ Полезные команды<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>mkdocs<span class="w"> </span>serve<span class="w">         </span><span class="c1"># локальный предпросмотр на http://127.0.0.1:8000/</span>
+mkdocs<span class="w"> </span>gh-deploy<span class="w">     </span><span class="c1"># публикация в gh-pages ветку</span>
+git<span class="w"> </span>status<span class="w">           </span><span class="c1"># проверить изменения</span>
+</code></pre></div>
+
+<hr />
+<p>🎉 Теперь у тебя настроенная база знаний с автопубликацией через MkDocs!</p>
 
 
 

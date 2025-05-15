@@ -26,15 +26,17 @@ nav:
       - Схема БД: tech-docs/db-schema.md
       - Настройка: tech-docs/config.md
       - Интеграция с Python: tech-docs/python-interop.md
-  - Сценарии:
+  - Инструкции/Руководства:
       - Руководство пользователя: usage/user-guide.md
       - Тест-кейсы: usage/test-cases.md
       - Примеры: usage/examples.md
+      - Развёртывание MkDocs: mkdocs_deploy_guide.md
   - Решения (ADR):
       - Выбор СУБД: decisions/0001-db-choice.md
   - Команда:
       - Участники: team/contributors.md
       - Ответственности: team/responsibilities.md
+
 
 markdown_extensions:
   - admonition
