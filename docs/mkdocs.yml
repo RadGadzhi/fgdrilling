@@ -1,0 +1,50 @@
+site_name: Project Knowledge Base
+site_description: Документация проекта
+site_author: Твоя команда
+site_url: https://RadGadzhi.github.io/fgdrilling/
+
+theme:
+  name: material  # красивая тема с поддержкой навигации, поиска и пр.
+  language: ru
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+
+nav:
+  - Главная: README.md
+  - Архитектура:
+      - Обзор: architecture/overview.md
+      - Компоненты: architecture/components.md
+      - Потоки данных: architecture/data-flow.md
+  - Техническая документация:
+      - API спецификация: tech-docs/api-specs.md
+      - Схема БД: tech-docs/db-schema.md
+      - Настройка: tech-docs/config.md
+      - Интеграция с Python: tech-docs/python-interop.md
+  - Сценарии:
+      - Руководство пользователя: usage/user-guide.md
+      - Тест-кейсы: usage/test-cases.md
+      - Примеры: usage/examples.md
+  - Решения (ADR):
+      - Выбор СУБД: decisions/0001-db-choice.md
+  - Команда:
+      - Участники: team/contributors.md
+      - Ответственности: team/responsibilities.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/RadGadzhi/fgdrilling
