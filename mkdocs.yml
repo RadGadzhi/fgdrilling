@@ -30,7 +30,7 @@ nav:
       - Руководство пользователя: usage/user-guide.md
       - Тест-кейсы: usage/test-cases.md
       - Примеры: usage/examples.md
-      - Развёртывание MkDocs: mkdocs_deploy_guide.md
+      - Развёртывание MkDocs: usage/mkdocs_deploy_guide.md
   - Решения (ADR):
       - Выбор СУБД: decisions/0001-db-choice.md
   - Команда:
