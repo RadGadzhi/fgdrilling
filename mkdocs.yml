@@ -16,7 +16,6 @@ theme:
     - search.suggest
 
 nav:
-  - Тест тригрер: test-trigger.md
   - Главная: README.md
   - Архитектура:
       - Обзор: architecture/overview.md
