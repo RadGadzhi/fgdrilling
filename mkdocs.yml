@@ -36,6 +36,9 @@ nav:
   - Команда:
       - Участники: team/contributors.md
       - Ответственности: team/responsibilities.md
+  - Попытки mindcode: 
+      - Распределение задач на день: mindcode/timetable.md
+      - Бэклог: mindcode/backlog.md
 
 
 markdown_extensions:
