@@ -37,8 +37,8 @@ nav:
       - Участники: team/contributors.md
       - Ответственности: team/responsibilities.md
   - Попытки mindcode: 
-      - Распределение задач на день: mindcode/timetable.md
-      - Бэклог: mindcode/backlog.md
+      - Распределение задач на день: mind-code/timetable.md
+      - Бэклог: mind-code/backlog.md
 
 
 markdown_extensions:
