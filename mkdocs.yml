@@ -39,6 +39,7 @@ nav:
   - Попытки mindcode: 
       - Распределение задач на день: mind-code/timetable.md
       - Бэклог: mind-code/backlog.md
+      - Мысли о проекте: mind-code/project_thoughts.md
 
 
 markdown_extensions:
