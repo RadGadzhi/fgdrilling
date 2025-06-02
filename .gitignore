@@ -18,3 +18,4 @@ venv/
 # Игнорировать директории сборки
 /site/
 /frontend/node_modules
+/docs/.obsidian
