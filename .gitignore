@@ -19,3 +19,7 @@ venv/
 /site/
 /frontend/node_modules
 /docs/.obsidian
+/node_modules
+/demo_venv/
+*.pyc
+__pycache__/
