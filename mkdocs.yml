@@ -16,6 +16,7 @@ theme:
     - search.suggest
 
 nav:
+  - Roadmap: ROADMAP.md
   - Главная: README.md
   - Архитектура:
       - Обзор: architecture/overview.md
